@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ADVANCED CALCULATOR</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="assets/dev-transparent.ico" type="image/x-icon">
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/main.css'>
+    <script type="text/javascript" src='assets/main.js'></script>
+</head>
+<body>
+    <div class="main-body">
+        <section class="content">
+            <div class="header">
+                <p>GENIIUS TEK &trade;<span>V<small>1.0.2</small></span></p>
+            </div>
+            <div class="screen">
+                <input class="screen-input" type="text" id="input" placeholder="" readonly>
+                <input class="screen-result" type="text" id="result" value="0" readonly>
+            </div>
+            <div class="copyright">
+                <input class="operator-del" onclick="clearScreen();document.getElementById('result').value = 0;" type="button" value="AC">
+            </div>
+            <div class="btn-section">
+                <div class="row-functions-btn">
+                    <input class="column-functions-btn" type="button" value="&pi;" onclick="display('3.14')">
+                    <input class="column-functions-btn" type="button" value="(" onclick="display('&lpar;')" ondblclick="display('&lbrack;')">
+                    <input class="column-functions-btn" type="button" value=")" onclick="display('&rpar;')" ondblclick="display('&rbrack;')">
+                    <input class="column-functions-btn" type="button" value="sin" onclick="display('Math.sin&lpar;')">
+                    <input class="column-functions-btn" type="button" value="cos" onclick="display('Math.cos&lpar;')">
+                    <button class="column-functions-btn" onclick="display('Math.tan&lpar;')">tan</button>
+                    <input class="del" onclick="del()" type="button" value="DEL"><br>
+                </div>
+                <div class="row-functions-btn">
+                    <input class="column-functions-btn" type="button" value="&Sqrt;" onclick="display('Math.sqrt&lpar;')">
+                    <input class="column-functions-btn" type="button" value="&lessdot;" onclick="display('<')">
+                    <input class="column-functions-btn" type="button" value="&GreaterEqual;" onclick="display('>')">
+                    <input class="column-functions-btn" type="button" value="&NotEqual;" onclick="display('!=')">
+                    <input class="column-functions-btn" type="button" value="log" onclick="display('Math.log10&lpar;')">
+                    <button class="column-functions-btn" onclick="display('Math.log&lpar;')">ln</button>
+                </div>
+                <button class="columns operator" onclick="display('/')">&divide;</button>
+            </div>
+            <div class="btn-section">
+                <div class="row">
+                    <input class="column" type="button" value="7" onclick="display('7')">
+                    <input class="column" type="button" value="8" onclick="display('8')">
+                    <input class="column" type="button" value="9" onclick="display('9')">
+                </div>
+                <div class="row">
+                    <button class="column operator" onclick="display('*')">&times;</button>
+                    <button class="column" onclick="display('4')">4</button>
+                    <button class="column" onclick="display('5')">5</button>
+                    <button class="column" onclick="display('6')">6</button>
+                </div>
+                <div class="row">
+                    <button class="column operator" onclick="display('+')">&plus;</button>
+                    <button class="column" onclick="display('1')">1</button>
+                    <button class="column" onclick="display('2')">2</button>
+                    <button class="column" onclick="display('3')">3</button>
+                </div>
+                <div class="row">
+                    <input class="column operator" type="button" value="&minus;" onclick="display('-')">
+                    <button class="column" onclick="display('.')">.</button>
+                    <button class="column" onclick="display('0')">0</button>
+                    <button class="column operator" onclick="display('e')">EXP</button>
+                    <button class="column operator" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
